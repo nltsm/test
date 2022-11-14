@@ -20,6 +20,15 @@ app.addModule('brand-block', function () {
 
 app.addModule('main', function () {
 	this.init = function () {
+		$('.main_search-input').on('focus', function () {
+			$(this).next().addClass('__hidden');
+		})
+		$('.main_search-input').on('blur', function () {
+			if (!$(this).val()) {
+				$(this).next().removeClass('__hidden');
+			}
+		})
+		
 		setTimeout(function () {
 			changeMainDescriptionText();
 		}, 1000);
