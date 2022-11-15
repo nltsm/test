@@ -1456,6 +1456,7 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px 0 50px;
+  overflow: hidden;
 }
 
 .plus-block {
@@ -2310,6 +2311,14 @@ button {
 
   .news-block_button {
     margin: 30px auto 0;
+  }
+
+  .pages-block_bg {
+    display: none;
+  }
+
+  .pages-block_bg.mobile {
+    display: block;
   }
 
   .plus-block {
