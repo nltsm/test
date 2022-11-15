@@ -2243,6 +2243,10 @@ button {
     line-height: 31px;
   }
 
+  .models-block_items {
+    display: block;
+  }
+
   .models-block_item {
     margin-right: 0;
     margin-bottom: 0;

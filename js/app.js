@@ -147,21 +147,37 @@ app.addModule('mobile-load', function () {
 	};
 });
 app.addModule('models-block', function () {
+	let isSlick = false;
+
 	this.init = function () {
 		if ($(window).width() < 767) {
-			$('.models-block_items').slick({
-				slidesToShow: 4,
-				responsive: [
-					{
-						breakpoint: 481,
-						settings: {
-							slidesToShow: 3
-						}
-					}
-				]
-			})
+			if (!isSlick) {
+				slick();
+			}
+		} else {
+			if (isSlick) {
+				unslick();
+			}
 		}
 	};
+
+	function slick() {
+		$('.models-block_items').slick({
+			slidesToShow: 4,
+			responsive: [
+				{
+					breakpoint: 481,
+					settings: {
+						slidesToShow: 3
+					}
+				}
+			]
+		})
+	}
+
+	function unslick() {
+		$('.models-block_items').slick('unslick');
+	}
 });
 
 app.addModule('news-block', function () {
