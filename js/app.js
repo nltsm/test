@@ -139,13 +139,29 @@ app.addModule('news-block', function () {
 });
 
 app.addModule('plus-items', function () {
+	let isSlick = false;
+	
 	this.init = function () {
 		if ($(window).width() < 767) {
-			$('.plus-items_row').slick({
-				slidesToShow: 1
-			})
+			if (!isSlick) {
+				slick();
+			}
+		} else {
+			if (isSlick) {
+				unslick();
+			}
 		}
 	};
+	
+	function slick() {
+		$('.plus-items_row').slick({
+			slidesToShow: 1
+		});
+	}
+	
+	function unslick() {
+		$('.plus-items_row').slick('unslick');
+	}
 });
 
 app.addModule('reviews-block', function () {
@@ -153,6 +169,7 @@ app.addModule('reviews-block', function () {
 		$('.reviews-block_slider').slick({
 			dots: true,
 			slidesToShow: 1,
+			adaptiveHeight: true,
 			responsive: [
 				{
 					breakpoint: 1300,

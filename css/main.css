@@ -380,6 +380,11 @@ button {
   display: block;
   position: relative;
   border-radius: 5px;
+  transition: 0.3s;
+}
+
+.articles-block_item:hover {
+  transform: scale(1.02);
 }
 
 .articles-block_item img {
@@ -913,13 +918,13 @@ button {
   padding-top: 25px;
   display: none;
   top: 0;
-  left: 30px;
+  left: 20px;
   text-decoration: none;
 }
 
 .map-block_tel-button span {
   font-weight: 500;
-  font-size: 7px;
+  font-size: 9px;
   text-align: center;
   color: #FFFFFF;
   background: rgba(0, 136, 207, 0.6);
@@ -1051,6 +1056,11 @@ button {
   align-items: center;
   width: 120px;
   height: 120px;
+  transition: 0.3s;
+}
+
+.models-block_image:hover {
+  transform: scale(1.05);
 }
 
 .models-block_calc {
@@ -1081,12 +1091,12 @@ button {
 }
 
 .models-block_cal-list li:before {
-  content: '';
+  content: '' !important;
   width: 7px;
   height: 7px;
   border: 1px solid #000000;
   border-radius: 50%;
-  margin-right: 17px;
+  margin: 0 17px 0 0 !important;
   flex-shrink: 0;
 }
 
@@ -1654,6 +1664,11 @@ button {
   border: 1px solid #0088CF;
   border-radius: 5px;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.reviews-block_form-preview a:hover {
+  background: rgba(197, 197, 197, 0.9);
 }
 
 .scroll-block {
