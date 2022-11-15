@@ -1,21 +1,53 @@
 app.addModule('articles-block', function () {
+	let isSlick = false;
+
 	this.init = function () {
-		if ($(window).width() < 481) {
-			$('.articles-block_row').slick({
-				dots: true
-			})
+		if ($(window).width() < 767) {
+			if (!isSlick) {
+				slick();
+			}
+		} else {
+			if (isSlick) {
+				unslick();
+			}
 		}
 	};
+
+	function slick() {
+		$('.articles-block_row').slick({
+			dots: true
+		})
+	}
+
+	function unslick() {
+		$('.articles-block_row').slick('unslick');
+	}
 });
 
 app.addModule('brand-block', function () {
+	let isSlick = false;
+
 	this.init = function () {
 		if ($(window).width() < 767) {
-			$('.brand-block_items').slick({
-				slidesToShow: 3
-			})
+			if (!isSlick) {
+				slick();
+			}
+		} else {
+			if (isSlick) {
+				unslick();
+			}
 		}
 	};
+
+	function slick() {
+		$('.brand-block_items').slick({
+			dots: true
+		})
+	}
+
+	function unslick() {
+		$('.brand-block_items').slick('unslick');
+	}
 });
 
 app.addModule('main', function () {
