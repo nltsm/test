@@ -209,6 +209,32 @@ app.addModule('news-block', function () {
 	};
 });
 
+app.addModule('plus-block-2', function () {
+	let isSlick = false;
+
+	this.init = function () {
+		if ($(window).width() < 767) {
+			if (!isSlick) {
+				slick();
+			}
+		} else {
+			if (isSlick) {
+				unslick();
+			}
+		}
+	};
+
+	function slick() {
+		$('.plus-block-2_row').slick({
+			slidesToShow: 1,
+		});
+	}
+
+	function unslick() {
+		$('.plus-items_row').slick('unslick');
+	}
+});
+
 app.addModule('plus-items', function () {
 	let isSlick = false;
 	

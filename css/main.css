@@ -1641,6 +1641,20 @@ button {
   padding-left: 26px;
 }
 
+.plus-block-2 .slick-arrow {
+  background-image: url("../img/arrow-8.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.plus-block-2 .slick-arrow.slick-prev {
+  left: 0;
+}
+
+.plus-block-2 .slick-arrow.slick-next {
+  right: 0;
+}
+
 .plus-block-container {
   background-image: url("../img/plus-container.jpg");
   background-position: center;
@@ -2848,6 +2862,11 @@ button {
   .plus-block-2_col {
     width: 50%;
     margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .plus-block-2_ico img {
+    margin: 0 auto;
   }
 
   .plus-block-2_title {
