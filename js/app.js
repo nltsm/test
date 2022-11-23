@@ -51,10 +51,20 @@ app.addModule('brand-block', function () {
 	}
 });
 
+app.addModule('button-item', function () {
+	this.init = function () {
+		$('.button-item.__phone-click').click(function (e) {
+			e.preventDefault();
+			
+			$(this).toggleClass('__phone')
+		})
+	};
+});
+
 app.addModule('cart-slider', function () {
 	this.init = function () {
 		$('.cart-slider_main').slick({
-			slidesToShow: 3,
+			slidesToShow: 4,
 			responsive: [
 				{
 					breakpoint: 767,
@@ -328,17 +338,27 @@ app.addModule('services-block', function () {
 				}
 			]
 		})
+		
+		
 	};
 });
 
 app.addModule('work-description', function () {
 	this.init = function () {
-		$('.work-description_link').click(function (e) {
+		let link = $('.work-description_link');
+		
+		let text = link.text();
+		let closeText = link.attr('data-close');
+		let isVisible = false;
+
+		link.click(function (e) {
 			e.preventDefault();
 			
-			$('.work-description_hidden').slideDown();
+			$('.work-description_hidden').slideToggle();
 			
-			$(this).remove();
+			isVisible = !isVisible;
+			
+			$(this).text(isVisible ? closeText : text);
 		})
 	};
 });

@@ -480,6 +480,19 @@ button {
   transition: 0.3s;
 }
 
+.button-item i {
+  font-weight: normal;
+  display: none;
+}
+
+.button-item.__phone span {
+  display: none;
+}
+
+.button-item.__phone i {
+  display: block;
+}
+
 .button-item.__type-1 {
   color: #FFFFFF;
   background: #9CA2A6;
@@ -544,7 +557,6 @@ button {
 }
 
 .cart-slider_main {
-  width: 1055px;
   margin: 0 -10px;
 }
 
@@ -572,7 +584,7 @@ button {
 
 .checkbox_text {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   color: #9CA2A6;
 }
@@ -1718,7 +1730,9 @@ button {
 }
 
 .plus-block-2_ico {
-  margin-bottom: 4px;
+  margin: 0 auto 4px;
+  display: block;
+  text-align: center;
 }
 
 .plus-block-2_title {
@@ -1728,7 +1742,7 @@ button {
   letter-spacing: -0.02em;
   color: #FFFFFF;
   margin-bottom: 4px;
-  padding-left: 26px;
+  text-align: center;
 }
 
 .plus-block-2_text {
@@ -1737,7 +1751,7 @@ button {
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #FFFFFF;
-  padding-left: 26px;
+  text-align: center;
 }
 
 .plus-block-2 .slick-arrow {
@@ -1881,6 +1895,18 @@ button {
   height: 100%;
 }
 
+.plus-items_data.__no-bg {
+  background: none;
+  padding-right: 10px;
+  display: flex;
+}
+
+.plus-items_data img {
+  max-width: 50px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
 .plus-items_data strong {
   display: block;
   margin-bottom: 18px;
@@ -1923,19 +1949,19 @@ button {
 
 .point-block_label {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   color: #333;
   width: 170px;
   border-right: 1px solid #9CA2A6;
-  padding: 19px 24px;
+  padding: 10px 20px;
 }
 
 .point-block_input {
   width: 0;
   flex-grow: 1;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   border: none;
   padding-left: 30px;
@@ -1963,7 +1989,7 @@ button {
 }
 
 .point-block_checkbox {
-  margin-right: 60px;
+  margin-right: 30px;
 }
 
 .reviews-block {
@@ -2125,7 +2151,7 @@ button {
 .services-block_col.__2 {
   flex-grow: 1;
   width: 0;
-  padding-left: 170px;
+  padding-left: 90px;
 }
 
 .services-block_col.__3 {
@@ -2157,7 +2183,7 @@ button {
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 26px 26px;
-  padding-left: 52px;
+  padding-left: 40px;
   line-height: 26px;
   font-weight: 400;
   font-size: 15.3056px;
@@ -2169,7 +2195,7 @@ button {
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 26px 26px;
-  padding-left: 52px;
+  padding-left: 40px;
   line-height: 26px;
   font-weight: 400;
   font-size: 15.3056px;
@@ -2962,10 +2988,6 @@ button {
     width: 50%;
     margin-bottom: 15px;
     text-align: center;
-  }
-
-  .plus-block-2_ico img {
-    margin: 0 auto;
   }
 
   .plus-block-2_title {
